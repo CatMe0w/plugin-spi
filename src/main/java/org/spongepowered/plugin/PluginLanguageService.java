@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.jar.Manifest;
 
-public interface PluginLanguageService<P extends PluginContainer> {
+public interface PluginLanguageService {
 
     /**
      * Gets the name of this service.

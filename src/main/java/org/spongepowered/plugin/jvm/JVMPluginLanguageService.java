@@ -24,7 +24,6 @@
  */
 package org.spongepowered.plugin.jvm;
 
-import org.spongepowered.plugin.InvalidPluginException;
 import org.spongepowered.plugin.PluginCandidate;
 import org.spongepowered.plugin.PluginEnvironment;
 import org.spongepowered.plugin.PluginLanguageService;
@@ -45,13 +44,12 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.Manifest;
 
-public abstract class JVMPluginLanguageService<P extends JVMPluginContainer> implements PluginLanguageService<P> {
+public abstract class JVMPluginLanguageService implements PluginLanguageService {
 
     private static final String DEFAULT_METADATA_FILE_NAME = "plugins.json";
 
