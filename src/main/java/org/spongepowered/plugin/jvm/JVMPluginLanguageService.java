@@ -112,15 +112,6 @@ public abstract class JVMPluginLanguageService<P extends JVMPluginContainer> imp
         return this.sortCandidates(pluginCandidates);
     }
 
-    @Override
-    public void loadPlugin(final PluginEnvironment environment, final P container, final ClassLoader targetClassLoader) throws InvalidPluginException {
-        Objects.requireNonNull(environment);
-        Objects.requireNonNull(container);
-        Objects.requireNonNull(targetClassLoader);
-
-        container.setInstance(this.createPluginInstance(environment, container, targetClassLoader));
-    }
-
     private InputStream getFileAsStream(final Path rootDirectory, final String relativePath) throws URISyntaxException, IOException {
         final URI uri = rootDirectory.toUri();
         Path jarFile = null;
@@ -169,6 +160,4 @@ public abstract class JVMPluginLanguageService<P extends JVMPluginContainer> imp
     protected List<PluginCandidate> sortCandidates(final List<PluginCandidate> pluginCandidates) {
         return pluginCandidates;
     }
-
-    protected abstract Object createPluginInstance(final PluginEnvironment environment, final P container, final ClassLoader targetClassLoader) throws InvalidPluginException;
 }
