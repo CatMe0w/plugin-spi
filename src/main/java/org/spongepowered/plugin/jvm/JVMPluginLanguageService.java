@@ -49,7 +49,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.Manifest;
 
-public abstract class JVMPluginLanguageService<P extends JVMPluginContainer> implements PluginLanguageService {
+public abstract class JVMPluginLanguageService implements PluginLanguageService {
 
     private static final String DEFAULT_METADATA_FILE_NAME = "plugins.json";
 
